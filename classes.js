@@ -152,3 +152,27 @@ It can :
       It should set decrease wear_and_tear_count by 10, and set needs_reboot to false
 
 */
+
+class Machine {
+  constructor() {
+    this.widgets_made_count = 0;
+    this.wear_and_tear_count = 0;
+    this.needs_reboot = false;
+  }
+
+  makeWidgets(num) {
+    this.widgets_made_count += num;
+    this.wear_and_tear_count += (Math.floor(num / 50));
+  }
+
+  fixMachine() {
+    this.needs_reboot = true;
+  }
+
+  reboot() {
+    this.wear_and_tear_count -= 10;
+    return function(){
+      Machine.needs_reboot = false;
+    };
+  }
+}

@@ -127,8 +127,11 @@ var deleteTheBigNumbers = {
   fourth: 200
 }
 
-// CODE HERE
-
+for (var key in deleteTheBigNumbers) {
+  if (deleteTheBigNumbers[key] > 100) {
+    delete deleteTheBigNumbers[key];
+  }
+}
 
 // ========================
 

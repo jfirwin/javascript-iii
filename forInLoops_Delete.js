@@ -138,8 +138,14 @@ for (var key in deleteTheBigNumbers) {
 
 // Write a function called startsWithK that takes an object as a parameter. Write a for in loop to loop over the object. If any property name starts with k, delete that property. Return the updated object.
 
-// CODE HERE
-
+function startsWithK(obj) {
+  for (var key in obj) {
+    if (key.substring(0,1) === 'k') {
+      delete obj[key];
+    }
+  }
+  return obj;
+}
 
 
 // ========================

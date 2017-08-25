@@ -95,11 +95,11 @@ function secrets(obj) {
 //   two: 2,
 //   three: 3
 // }
-
+//
 // for(var key in deleteAllThethings) {
 //   delete deleteAllThethings[key]
 // }
-
+//
 // console.log(deleteAllThethings)
 
 // ========================
@@ -107,8 +107,12 @@ function secrets(obj) {
 
 // Write a function called removePassword that takes in an object. Delete the property password and return the object.
 
-// CODE HERE
-
+function removePassword(obj) {
+  for (var key in obj) {
+    delete obj.password;
+  }
+  return obj;
+}
 
 
 // ========================

@@ -64,7 +64,9 @@ const monstersInYourPocket = [{"monster":"Bulbabunny","CP":156},{"monster":"Bulb
 {"monster":"Sandmush","CP":262},{"monster":"Sandmush","CP":25},{"monster":"Charaflier","CP":215},
 {"monster":"Ponylopse","CP":125},{"monster":"Bulbabunny","CP":178}]
 
-let myStrongest // Your code here
+let myStrongest = monstersInYourPocket.filter(function(monst){
+  return (monst['CP'] > 200)
+})
 
 // Below we have an array of orders.  but they all have different tax rates.
 // We want to make a new array of total prices.

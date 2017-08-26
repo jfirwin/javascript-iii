@@ -1,5 +1,5 @@
 // =========================
-// NESTING 
+// NESTING
 // =========================
 
 // === PROBLEM 1 ===========
@@ -36,8 +36,17 @@ var employees = [{
 //  2. If the employee's first name is Lorie, change her department to 'HR'.
 //  3. Return the updated employee array.
 
-// Code here
-
+function employeeUpdater() {
+  for (var i = 0; i < employees.length; i++) {
+    console.log(employees[i].firstName);
+    if(employees[i].firstName === 'Lorie') {
+      employees[i].department = 'HR';
+    } else if(employees[i].firstName === 'Theo') {
+      delete employees[i];
+    }
+  }
+  return employees;
+}
 
 
 
@@ -47,7 +56,7 @@ var employees = [{
 // === PROBLEM 2 ==========
 
 
-// The array below represents IDs tied to reported workplace accidents. An employee accidentally entered in duplicates to array, making it look as though there are more accidents this year than there actually are. 
+// The array below represents IDs tied to reported workplace accidents. An employee accidentally entered in duplicates to array, making it look as though there are more accidents this year than there actually are.
 // 1. Write a function called 'removeDuplicates' that will remove all duplicate entries in the workplaceAccidents array.
 // 2. Use nested for loops to check for duplicate numbers, and then remove the duplicates from the array.
 // 3. Return the updated array.
@@ -78,7 +87,7 @@ var cat = {
     }]
 }
 
-// Fluffy has two friends, Grumpy and Lazy Bones. 
+// Fluffy has two friends, Grumpy and Lazy Bones.
 // 1. Assign the value of Grumpy's 2nd activity to the variable below.
 // 2. Assign fluffy2ndFriend the name of Fluffy's 2nd friend.
 
@@ -135,14 +144,10 @@ var myCar = {
 // === PROBLEM 5 ==========
 
 // Below is an array of arrays. Use two for loops.
-// 1. Write a function called 'looper'. 
-// 2. 'looper' should loop over the arrays. 
+// 1. Write a function called 'looper'.
+// 2. 'looper' should loop over the arrays.
 // 3. If the number is odd, replace it with 'odd'.
 //    If the number is even, replace it with 'even'.
 // 4. Return the modified numsArr.
 
 var numsArr = [ [1, 2, 3, 4], [5, 6], [7, 8, 9, 10, 11]];
-
-
-
-

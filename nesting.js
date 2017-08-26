@@ -125,8 +125,11 @@ var myCar = {
   ]
 }
 
-// Code here
-
+function recordCleaner() {
+  for (var i = 0; i < myCar.accidents.length; i++) {
+    myCar.accidents[i].atFaultForAccident = false
+  }
+}
 
 
 

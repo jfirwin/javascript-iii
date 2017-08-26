@@ -64,7 +64,7 @@ function removeDuplicates() {
     for (var j = 0; j < workplaceAccidents.length; j++) {
       if (workplaceAccidents[i] === workplaceAccidents[j] && i != j) {
         workplaceAccidents.splice(j, 1);
-      } else arr.push(workplaceAccidents[i])
+      }
     }
   }
   return workplaceAccidents;
@@ -131,13 +131,6 @@ function recordCleaner() {
   }
 }
 
-
-
-
-
-
-
-
 // === PROBLEM 5 ==========
 
 // Below is an array of arrays. Use two for loops.
@@ -148,3 +141,15 @@ function recordCleaner() {
 // 4. Return the modified numsArr.
 
 var numsArr = [ [1, 2, 3, 4], [5, 6], [7, 8, 9, 10, 11]];
+
+function looper() {
+  let answer = numsArr.slice();
+  for (var i = 0; i < numsArr.length; i++) {
+    for (var j = 0; j < numsArr[i].length; j++) {
+      if (numsArr[i][j] % 2 === 0) {
+        answer[i][j] = 'even';
+      } else answer[i][j] = 'odd';
+    }
+  }
+  return answer;
+}

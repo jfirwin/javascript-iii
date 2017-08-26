@@ -87,13 +87,11 @@ var cat = {
 // 1. Assign the value of Grumpy's 2nd activity to the variable below.
 // 2. Assign fluffy2ndFriend the name of Fluffy's 2nd friend.
 
-// Code here
-
 var grumpyActivity;
 var fluffy2ndFriend;
 
-
-
+grumpyActivity = cat.catFriends[0].activities[1];
+fluffy2ndFriend = cat.catFriends[1].name;
 
 
 
